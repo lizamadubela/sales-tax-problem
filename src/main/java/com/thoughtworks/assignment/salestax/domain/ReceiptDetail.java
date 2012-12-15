@@ -67,7 +67,7 @@ public class ReceiptDetail {
 
         buffer.append(goods.getName());
         buffer.append(": ");
-        buffer.append(getTotalPrice());
+        buffer.append(getTotalPrice().setScale(2));
 
         return buffer.toString();
     }
