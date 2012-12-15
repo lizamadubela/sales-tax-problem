@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 public interface ITaxStrategy {
 
     /**
-     * 根据商品价格计算销售税值，需要舍入至0.05分
+     * 根据商品价格计算销售税值
      * @param price 税前价格
      * @return 销售税
      */

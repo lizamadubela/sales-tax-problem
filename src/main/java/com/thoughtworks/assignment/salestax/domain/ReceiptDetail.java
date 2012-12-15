@@ -51,7 +51,7 @@ public class ReceiptDetail {
 
 
     public BigDecimal getTotalPrice() {
-        return unitPrice.add(tax).setScale(2);
+        return unitPrice.add(tax);
     }
 
     @Override

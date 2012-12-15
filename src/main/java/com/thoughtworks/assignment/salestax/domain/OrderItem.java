@@ -43,6 +43,10 @@ public class OrderItem {
         this.unitPrice = unitPrice;
     }
 
+    public BigDecimal getSubTotal() {
+        return unitPrice.multiply(BigDecimal.valueOf(count));
+    }
+
     @Override
     public String toString() {
         StringBuffer buffer = new StringBuffer();

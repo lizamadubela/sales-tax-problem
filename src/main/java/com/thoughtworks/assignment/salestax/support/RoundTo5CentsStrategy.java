@@ -11,7 +11,6 @@ public abstract class RoundTo5CentsStrategy implements ITaxStrategy {
         BigDecimal raw = doCalculateSalesTax(price);
         raw = raw.multiply(BigDecimal.valueOf(20.00));
         raw = BigDecimal.valueOf(Math.ceil(raw.doubleValue()) / 20.00);
-        raw.setScale(2);
         return raw;
     }
 

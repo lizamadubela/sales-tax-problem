@@ -21,7 +21,7 @@ public class OrderService {
             TaxConfiguration taxConfiguration = taxConfigurationRepository.findConfiguration(item.getGoods());
 
             ITaxStrategy strategy = taxConfiguration.getTaxStrategy();
-            BigDecimal tax = strategy.calculateSalesTax(item.getUnitPrice().multiply(BigDecimal.valueOf(item.getCount())));
+            BigDecimal tax = strategy.calculateSalesTax(item.getSubTotal());
 
             ReceiptDetail receiptDetail = new ReceiptDetail();
             receiptDetail.setGoods(item.getGoods());
