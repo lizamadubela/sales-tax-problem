@@ -42,4 +42,24 @@ public class OrderItem {
     public void setUnitPrice(BigDecimal unitPrice) {
         this.unitPrice = unitPrice;
     }
+
+    @Override
+    public String toString() {
+        StringBuffer buffer = new StringBuffer();
+
+        buffer.append(count);
+        buffer.append(" ");
+
+        if (goods.getOrigin() == Origin.imported) {
+            buffer.append("imported ");
+        }
+
+        buffer.append(goods.getName());
+        buffer.append(" ");
+
+        buffer.append("at ");
+        buffer.append(unitPrice.setScale(2).toString());
+
+        return buffer.toString();
+    }
 }

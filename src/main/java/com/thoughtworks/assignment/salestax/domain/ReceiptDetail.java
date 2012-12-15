@@ -50,4 +50,25 @@ public class ReceiptDetail {
     }
 
 
+    public BigDecimal getTotalPrice() {
+        return unitPrice.add(tax).setScale(2);
+    }
+
+    @Override
+    public String toString() {
+        StringBuffer buffer = new StringBuffer();
+
+        buffer.append(count);
+        buffer.append(" ");
+
+        if (goods.getOrigin() == Origin.imported) {
+            buffer.append("imported ");
+        }
+
+        buffer.append(goods.getName());
+        buffer.append(": ");
+        buffer.append(getTotalPrice());
+
+        return buffer.toString();
+    }
 }

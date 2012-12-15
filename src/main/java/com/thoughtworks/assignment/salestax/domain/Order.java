@@ -19,8 +19,16 @@ public class Order {
         items.add(item);
     }
 
-    public Receipt purchase() {
-        return null;
-    }
+    @Override
+    public String toString() {
 
+        StringBuffer buffer = new StringBuffer();
+
+        for (OrderItem item : items) {
+            buffer.append(item);
+            buffer.append(System.lineSeparator());
+        }
+
+        return buffer.toString();
+    }
 }

@@ -13,16 +13,53 @@ public class Receipt {
         return this.details;
     }
 
-    public BigDecimal getTotalTax() {
-        return null;
+
+    public void addDetail(ReceiptDetail detail) {
+        this.details.add(detail);
     }
 
     /**
-     *
+     * @return the total tax
+     */
+    public BigDecimal getTotalTax() {
+
+        BigDecimal totalTax = BigDecimal.valueOf(0.00);
+
+        for (ReceiptDetail detail : details) {
+            totalTax = totalTax.add(detail.getTax());
+        }
+
+        return totalTax;
+    }
+
+    /**
      * @return the total price of the receipt, including tax.
      */
     public BigDecimal getTotalPrice() {
-        return null;
+
+        BigDecimal totalPrice = BigDecimal.valueOf(0.00);
+
+        for (ReceiptDetail detail : details) {
+            totalPrice = totalPrice.add(detail.getTotalPrice());
+        }
+
+        return totalPrice;
     }
 
+    @Override
+    public String toString() {
+        StringBuffer buffer = new StringBuffer();
+
+        for (ReceiptDetail detail : details) {
+            buffer.append(detail.toString());
+            buffer.append(System.lineSeparator());
+        }
+
+        buffer.append("Sales Taxes: ").append(this.getTotalTax().setScale(2).toString());
+        buffer.append(System.lineSeparator());
+        buffer.append("Total: ").append(this.getTotalPrice().toString());
+
+
+        return buffer.toString();
+    }
 }
