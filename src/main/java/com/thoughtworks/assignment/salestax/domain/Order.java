@@ -26,7 +26,7 @@ public class Order {
 
         for (OrderItem item : items) {
             buffer.append(item);
-            buffer.append(System.lineSeparator());
+            buffer.append(System.getProperty("line.separator"));
         }
 
         return buffer.toString();

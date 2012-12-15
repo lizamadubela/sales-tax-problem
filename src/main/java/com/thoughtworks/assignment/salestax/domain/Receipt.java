@@ -52,11 +52,11 @@ public class Receipt {
 
         for (ReceiptDetail detail : details) {
             buffer.append(detail.toString());
-            buffer.append(System.lineSeparator());
+            buffer.append(System.getProperty("line.separator"));
         }
 
         buffer.append("Sales Taxes: ").append(this.getTotalTax().setScale(2).toString());
-        buffer.append(System.lineSeparator());
+        buffer.append(System.getProperty("line.separator"));
         buffer.append("Total: ").append(this.getTotalPrice().toString());
 
 

@@ -1,6 +1,5 @@
 package com.thoughtworks.assignment.salestax.application;
 
-import com.thoughtworks.assignment.salestax.domain.ITaxConfigurationRepository;
 import com.thoughtworks.assignment.salestax.domain.Order;
 import com.thoughtworks.assignment.salestax.domain.OrderService;
 import com.thoughtworks.assignment.salestax.domain.Receipt;
@@ -14,7 +13,8 @@ public class SalesTaxApplicationFacade {
 
     private static SalesTaxApplicationFacade INSTANCE;
 
-    private SalesTaxApplicationFacade() {}
+    private SalesTaxApplicationFacade() {
+    }
 
     public static SalesTaxApplicationFacade getInstance() {
         if (INSTANCE != null) {

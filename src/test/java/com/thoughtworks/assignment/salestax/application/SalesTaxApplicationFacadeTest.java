@@ -30,6 +30,7 @@ public class SalesTaxApplicationFacadeTest {
 
     @Test
     public void testInput1() {
+        System.out.println("*********************************************************");
         Goods goods1 = new Goods();
         goods1.setName("book");
         goods1.setCategory(Category.book);
@@ -81,10 +82,13 @@ public class SalesTaxApplicationFacadeTest {
         Assert.assertEquals(1.50, receipt.getTotalTax().doubleValue());
         Assert.assertEquals(29.83, receipt.getTotalPrice().doubleValue());
 
+        System.out.println("*********************************************************");
     }
 
     @Test
     public void testInput2() {
+        System.out.println("*********************************************************");
+
         Goods goods1 = new Goods();
         goods1.setName("box of chocolates");
         goods1.setCategory(Category.food);
@@ -123,10 +127,14 @@ public class SalesTaxApplicationFacadeTest {
         Assert.assertEquals(54.65, detail2.getTotalPrice().doubleValue());
         Assert.assertEquals(7.65, receipt.getTotalTax().doubleValue());
         Assert.assertEquals(65.15, receipt.getTotalPrice().doubleValue());
+
+        System.out.println("*********************************************************");
     }
 
     @Test
     public void testInput3() {
+        System.out.println("*********************************************************");
+
         Goods goods1 = new Goods();
         goods1.setName("bottle of perfume");
         goods1.setCategory(Category.cosmetics);
@@ -190,6 +198,8 @@ public class SalesTaxApplicationFacadeTest {
 
         Assert.assertEquals(6.70, receipt.getTotalTax().doubleValue());
         Assert.assertEquals(74.68, receipt.getTotalPrice().doubleValue());
+
+        System.out.println("*********************************************************");
 
     }
 }
