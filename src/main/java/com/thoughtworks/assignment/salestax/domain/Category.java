@@ -1,31 +1,34 @@
 package com.thoughtworks.assignment.salestax.domain;
 
-/**
- * 商品类别
- */
-public enum Category {
-    /**
-     * 食品
-     */
-    food,
+public class Category {
 
-    /**
-     * 书籍
-     */
-    book,
+    public static final Category FOOD       = new Category("food");
 
-    /**
-     * 药品
-     */
-    medical,
+    public static final Category BOOK       = new Category("book");
 
-    /**
-     * 音乐
-     */
-    music,
+    public static final Category MEDICAL    = new Category("medical");
 
-    /**
-     * 化妆品
-     */
-    cosmetics
+    public static final Category MUSIC      = new Category("music");
+
+    public static final Category COSMETICS  = new Category("cosmetics");
+
+
+    private String name;
+
+    public Category(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return this.name;
+    }
 }

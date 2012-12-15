@@ -50,7 +50,7 @@ public class TaxConfigurationRepositoryImpl implements ITaxConfigurationReposito
         String clazz = properties.getProperty(key);
 
 
-        Category category = Category.valueOf(categoryStr);
+        Category category = new Category(categoryStr);
         Origin origin = Origin.valueOf(originStr);
         ITaxStrategy strategy = null;
 

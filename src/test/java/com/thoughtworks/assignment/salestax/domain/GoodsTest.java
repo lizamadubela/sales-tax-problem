@@ -9,7 +9,7 @@ public class GoodsTest {
     public void testGoods() {
         Goods goods = new Goods();
         goods.setName("A Book");
-        goods.setCategory(Category.book);
+        goods.setCategory(Category.BOOK);
         goods.setOrigin(Origin.imported);
 
         Assert.assertEquals("A Book", goods.getName());

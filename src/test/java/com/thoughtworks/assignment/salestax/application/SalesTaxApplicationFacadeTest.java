@@ -33,7 +33,7 @@ public class SalesTaxApplicationFacadeTest {
         System.out.println("*********************************************************");
         Goods goods1 = new Goods();
         goods1.setName("book");
-        goods1.setCategory(Category.book);
+        goods1.setCategory(Category.BOOK);
         goods1.setOrigin(Origin.domestic);
         OrderItem item1 = new OrderItem();
         item1.setGoods(goods1);
@@ -42,7 +42,7 @@ public class SalesTaxApplicationFacadeTest {
 
         Goods goods2 = new Goods();
         goods2.setName("music CD");
-        goods2.setCategory(Category.music);
+        goods2.setCategory(Category.MUSIC);
         goods2.setOrigin(Origin.domestic);
         OrderItem item2 = new OrderItem();
         item2.setGoods(goods2);
@@ -51,7 +51,7 @@ public class SalesTaxApplicationFacadeTest {
 
         Goods goods3 = new Goods();
         goods3.setName("chocolate bar");
-        goods3.setCategory(Category.food);
+        goods3.setCategory(Category.FOOD);
         goods3.setOrigin(Origin.domestic);
         OrderItem item3 = new OrderItem();
         item3.setGoods(goods3);
@@ -91,7 +91,7 @@ public class SalesTaxApplicationFacadeTest {
 
         Goods goods1 = new Goods();
         goods1.setName("box of chocolates");
-        goods1.setCategory(Category.food);
+        goods1.setCategory(Category.FOOD);
         goods1.setOrigin(Origin.imported);
         OrderItem item1 = new OrderItem();
         item1.setGoods(goods1);
@@ -100,7 +100,7 @@ public class SalesTaxApplicationFacadeTest {
 
         Goods goods2 = new Goods();
         goods2.setName("bottle of perfume");
-        goods2.setCategory(Category.cosmetics);
+        goods2.setCategory(Category.COSMETICS);
         goods2.setOrigin(Origin.imported);
         OrderItem item2 = new OrderItem();
         item2.setGoods(goods2);
@@ -137,7 +137,7 @@ public class SalesTaxApplicationFacadeTest {
 
         Goods goods1 = new Goods();
         goods1.setName("bottle of perfume");
-        goods1.setCategory(Category.cosmetics);
+        goods1.setCategory(Category.COSMETICS);
         goods1.setOrigin(Origin.imported);
         OrderItem item1 = new OrderItem();
         item1.setGoods(goods1);
@@ -146,7 +146,7 @@ public class SalesTaxApplicationFacadeTest {
 
         Goods goods2 = new Goods();
         goods2.setName("bottle of perfum");
-        goods2.setCategory(Category.cosmetics);
+        goods2.setCategory(Category.COSMETICS);
         goods2.setOrigin(Origin.domestic);
         OrderItem item2 = new OrderItem();
         item2.setGoods(goods2);
@@ -155,7 +155,7 @@ public class SalesTaxApplicationFacadeTest {
 
         Goods goods3 = new Goods();
         goods3.setName("packet of headache pills");
-        goods3.setCategory(Category.medical);
+        goods3.setCategory(Category.MEDICAL);
         goods3.setOrigin(Origin.domestic);
         OrderItem item3 = new OrderItem();
         item3.setGoods(goods3);
@@ -164,7 +164,7 @@ public class SalesTaxApplicationFacadeTest {
 
         Goods goods4 = new Goods();
         goods4.setName("box of chocolates");
-        goods4.setCategory(Category.food);
+        goods4.setCategory(Category.FOOD);
         goods4.setOrigin(Origin.imported);
         OrderItem item4 = new OrderItem();
         item4.setGoods(goods4);

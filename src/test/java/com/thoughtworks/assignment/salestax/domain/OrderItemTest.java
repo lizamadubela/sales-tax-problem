@@ -13,7 +13,7 @@ public class OrderItemTest {
 
         Goods goods = new Goods();
         goods.setName("A Book");
-        goods.setCategory(Category.book);
+        goods.setCategory(Category.BOOK);
         goods.setOrigin(Origin.imported);
 
         item.setGoods(goods);

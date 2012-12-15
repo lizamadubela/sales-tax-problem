@@ -22,7 +22,7 @@ public class OrderTest {
 
         goods1 = new Goods();
         goods1.setName("A Book");
-        goods1.setCategory(Category.book);
+        goods1.setCategory(Category.BOOK);
         goods1.setOrigin(Origin.imported);
 
         item1 = new OrderItem();
@@ -35,7 +35,7 @@ public class OrderTest {
         goods2 = new Goods();
 
         goods2.setName("A Music CD");
-        goods2.setCategory(Category.music);
+        goods2.setCategory(Category.MUSIC);
         goods2.setOrigin(Origin.domestic);
 
         item2 = new OrderItem();
